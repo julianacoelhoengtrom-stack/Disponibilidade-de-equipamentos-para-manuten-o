@@ -12,7 +12,7 @@
     "plugins": {
       "cordova-plugin-file": {},
       "cordova-plugin-x-socialsharing": {},
-      "cordova-plugin-advanced-http": "3.3.1"
+      "cordova-plugin-advanced-http": {}
     }
   }
 }
