@@ -1,0 +1,17 @@
+{
+  "name": "visita-tecnica-ec",
+  "displayName": "Visita Técnica EC",
+  "version": "1.0.0",
+  "description": "Aplicativo offline de visitas da Engenharia Clínica.",
+  "private": true,
+  "scripts": {
+    "build:android": "cordova build android --debug"
+  },
+  "cordova": {
+    "platforms": ["android"],
+    "plugins": {
+      "cordova-plugin-file": {},
+      "cordova-plugin-x-socialsharing": {}
+    }
+  }
+}

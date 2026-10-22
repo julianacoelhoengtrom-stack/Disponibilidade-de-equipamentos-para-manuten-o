@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.org.hnl.engenhariaclinica.visitas" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Visita Técnica EC</name>
+  <description>Registro offline de visitas de manutenção da Engenharia Clínica.</description>
+  <content src="www/index.html" />
+  <author email="engenharia.clinica@hnl.org.br" href="https://cordova.apache.org">Engenharia Clínica</author>
+  <preference name="AndroidMinSdkVersion" value="24" />
+  <preference name="AndroidTargetSdkVersion" value="36" />
+  <preference name="SplashScreenBackgroundColor" value="#104B37" />
+  <preference name="AndroidWindowSplashScreenBackground" value="#104B37" />
+  <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/icon.png" />
+  <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="FadeSplashScreen" value="true" />
+  <preference name="FadeSplashScreenDuration" value="350" />
+  <platform name="android">
+    <icon src="res/icon/android/ldpi.png" density="ldpi" />
+    <icon src="res/icon/android/mdpi.png" density="mdpi" />
+    <icon src="res/icon/android/hdpi.png" density="hdpi" />
+    <icon src="res/icon/android/xhdpi.png" density="xhdpi" />
+    <icon src="res/icon/android/xxhdpi.png" density="xxhdpi" />
+    <icon src="res/icon/android/xxxhdpi.png" density="xxxhdpi" />
+  </platform>
+</widget>
