@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const SECTORS=['UTI Adulto','UTI Pediátrica','CME','Bloco Cirúrgico','Apartamento','Hematologia 1º andar','Agência Transfusional','TMO','Pediatria 1º andar','Central de Enfermagem','Radioterapia','CDI','Pediatria Térreo','Urgência','Hematologia Térreo','Ambulatório','Quimioterapia Adulto','Fisioterapia','Farmácia','Patrimônio','Almoxarifado'];
-const DB='visitas-engenharia-clinica-v2', STORE='visitas';const WEB_APP_URL='https://script.google.com/a/macros/hlaureano.org.br/s/AKfycbwrssuOpWWZbSSQjm1uCI4SqNI2m9D-3IxUsLAatMYLR5fz10USHUkppVOlrm-9uYat/exec';let db,signingField='',currentStrokes=[],activePointer=false,syncBusy=false;
+const DB='visitas-engenharia-clinica-v2', STORE='visitas';const WEB_APP_URL='https://script.google.com/macros/s/AKfycbwrssuOpWWZbSSQjm1uCI4SqNI2m9D-3IxUsLAatMYLR5fz10USHUkppVOlrm-9uYat/exec';let db,signingField='',currentStrokes=[],activePointer=false,syncBusy=false;
 const $=id=>document.getElementById(id),fmt=d=>new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(d),monthNow=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function openDb(){return new Promise((resolve,reject)=>{const q=indexedDB.open(DB,1);q.onupgradeneeded=()=>q.result.createObjectStore(STORE,{keyPath:'id'});q.onsuccess=()=>{db=q.result;resolve(db)};q.onerror=()=>reject(q.error)})}
