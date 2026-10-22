@@ -1,0 +1,19 @@
+{
+  "name": "Visitas de Manutenção - Engenharia Clínica HNL",
+  "short_name": "Visitas EC",
+  "lang": "pt-BR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#12533d",
+  "description": "Registro offline de visitas de manutenção com assinatura e PDF.",
+  "icons": [
+    {
+      "src": "assets/app-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#12533d">
+<title>Visitas de Manutenção · Engenharia Clínica</title>
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="opening" class="opening" aria-label="Engenharia Clínica">
+  <img src="assets/tecnico-abertura.png" alt="Técnico de engenharia clínica verificando um monitor multiparamétrico">
+  <div class="opening-shade"></div>
+  <div class="opening-copy"><span>ENGENHARIA CLÍNICA</span><h1>Visita técnica</h1><p>Registro seguro, mesmo sem internet.</p><button id="startApp" type="button">Começar</button></div>
+</section>
+<header class="topbar"><div class="brandmark">EC</div><div><b>Visita técnica</b><small>Engenharia Clínica · HNL</small></div><span id="netBadge" class="net">Offline pronto</span></header>
+<main>
+<section id="captureView" class="view active">
+  <div class="intro"><div><div class="eyebrow">NOVO REGISTRO</div><h1>Registrar visita</h1><p>O registro fica guardado neste aparelho, mesmo sem internet.</p></div><div class="month-icon">▦</div></div>
+  <form id="visitForm">
+    <section class="card">
+      <div class="section-title"><span class="step">1</span><div><b>Visita</b><small>Dados preenchidos no setor</small></div></div>
+      <div class="fields">
+        <label>Setor da ronda<select id="sector" required></select></label>
+        <div class="pair"><label>Mês de referência<input id="month" type="month" required></label><label>Data e hora<input id="when" readonly></label></div>
+        <label>Equipamento<input id="equipment" placeholder="Ex.: Monitor multiparamétrico" required autocomplete="off"></label>
+        <label>Técnico<select id="technician" required><option value="">Selecione</option><option>Diego Gama</option><option>Paulo Roberto</option></select></label>
+        <label>Resultado<select id="status"><option value="indisponivel">Sem equipamento disponível</option><option value="liberado">Equipamento liberado para manutenção</option></select></label>
+        <label>Nome de quem respondeu<input id="personName" placeholder="Nome completo" required autocomplete="name"></label>
+        <label>Função de quem respondeu<input id="personRole" placeholder="Ex.: Enfermeira, técnico de enfermagem" required></label>
+        <label>Justificativa / texto do termo<textarea id="justification" rows="5" required></textarea></label>
+        <label>Observação adicional <span class="optional">opcional</span><textarea id="notes" rows="2" placeholder="Detalhe útil sobre a visita"></textarea></label>
+      </div>
+    </section>
+    <section class="card signatures">
+      <div class="section-title"><span class="step">2</span><div><b>Assinaturas</b><small>Toque para assinar em tela cheia</small></div></div>
+      <button class="sign-row" type="button" data-sign="technician"><span class="sign-icon">✎</span><span><b>Assinatura do técnico</b><small id="techSignStatus">Pendente</small></span><span class="chevron">›</span></button>
+      <button class="sign-row" type="button" data-sign="responsible"><span class="sign-icon">✎</span><span><b>Assinatura do responsável do setor</b><small id="personSignStatus">Pendente</small></span><span class="chevron">›</span></button>
+      <p class="tiny">A assinatura registra o aceite do termo de visita e a informação fornecida no setor.</p>
+    </section>
+    <button class="primary save-btn" type="submit">Salvar visita neste aparelho</button>
+  </form>
+  <section class="card queue-card"><div class="queue-head"><div><b>Registros neste aparelho</b><small id="queueSummary">Carregando registros...</small></div><span class="count" id="queueCount">0</span></div><div id="queueList" class="queue-list"></div><button id="bundleBtn" class="secondary wide" type="button">Preparar envio para a aplicação web</button><button id="ackBtn" class="secondary wide" type="button" hidden>Marcar importação confirmada</button><p class="tiny">Depois de importar o pacote no painel web, use este botão para atualizar o status local.</p><p class="tiny">No local com internet, envie o pacote à aplicação web. Ela salva os PDFs na pasta e os dados na planilha.</p></section>
+</section>
+<section id="historyView" class="view hide"><div class="intro"><div><div class="eyebrow">ARQUIVADOS NO APARELHO</div><h1>Minhas visitas</h1><p>Veja os registros salvos e prepare o pacote para sincronizar.</p></div></div><div id="historyList" class="history-list"></div><button id="bundleBtn2" class="primary wide" type="button">Preparar envio para a aplicação web</button><button id="ackBtn2" class="secondary wide" type="button" hidden>Marcar importação confirmada</button></section>
+</main>
+<nav class="tabbar"><button class="tab active" data-tab="captureView"><span>＋</span>Novo</button><button class="tab" data-tab="historyView"><span>▤</span>Salvos <i id="tabCount">0</i></button></nav>
+<div id="signOverlay" class="sign-overlay" aria-hidden="true"><header><button id="cancelSign" type="button" class="icon-btn">×</button><div><b id="signTitle">Assinatura</b><small>Assine com o dedo dentro da área</small></div><button id="clearSign" type="button" class="clear-sign">Limpar</button></header><div class="signature-stage"><div class="signature-hint">Assinatura</div><canvas id="signCanvas"></canvas></div><footer><button id="saveSign" class="primary" type="button">Usar esta assinatura</button></footer></div>
+<div id="toast" role="status"></div>
+<script src="cordova.js"></script>
+<script src="app.js"></script>
+</body></html>
