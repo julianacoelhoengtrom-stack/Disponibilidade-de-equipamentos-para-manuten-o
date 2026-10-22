@@ -10,9 +10,9 @@
   "description": "Registro offline de visitas de manutenção com assinatura e PDF.",
   "icons": [
     {
-      "src": "assets/mascote-tecnico.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

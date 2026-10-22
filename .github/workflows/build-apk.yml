@@ -34,17 +34,6 @@ jobs:
       - name: Instalar Cordova
         run: npm install --global cordova@13.0.0
 
-      - name: Gerar ícones Android a partir da caricatura
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y librsvg2-bin
-          rsvg-convert -w 1024 -h 1024 www/assets/mascote-tecnico.svg > res/icon.png
-          rsvg-convert -w 36 -h 36 www/assets/mascote-tecnico.svg > res/icon/android/ldpi.png
-          rsvg-convert -w 48 -h 48 www/assets/mascote-tecnico.svg > res/icon/android/mdpi.png
-          rsvg-convert -w 72 -h 72 www/assets/mascote-tecnico.svg > res/icon/android/hdpi.png
-          rsvg-convert -w 96 -h 96 www/assets/mascote-tecnico.svg > res/icon/android/xhdpi.png
-          rsvg-convert -w 144 -h 144 www/assets/mascote-tecnico.svg > res/icon/android/xxhdpi.png
-          rsvg-convert -w 192 -h 192 www/assets/mascote-tecnico.svg > res/icon/android/xxxhdpi.png
 
       - name: Preparar projeto Android
         run: |

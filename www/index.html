@@ -7,7 +7,7 @@
 </head>
 <body>
 <section id="opening" class="opening" aria-label="Engenharia Clínica">
-  <img src="assets/mascote-tecnico.svg" alt="Caricatura desenhada de um técnico de engenharia clínica ao lado de um monitor">
+  <img src="assets/mascote-tecnico.png" alt="Caricatura desenhada de um técnico de engenharia clínica ao lado de um monitor">
   <div class="opening-shade"></div>
   <div class="opening-copy"><span>ENGENHARIA CLÍNICA</span><h1>Visita técnica</h1><p>Registro seguro, mesmo sem internet.</p><button id="startApp" type="button">Começar</button></div>
 </section>
@@ -21,9 +21,10 @@
       <div class="fields">
         <label>Setor da ronda<select id="sector" required></select></label>
         <div class="pair"><label>Mês de referência<input id="month" type="month" required></label><label>Data e hora<input id="when" readonly></label></div>
-        <label>Equipamento<input id="equipment" placeholder="Ex.: Monitor multiparamétrico" required autocomplete="off"></label>
+        <label>Categoria do equipamento<input id="equipment" placeholder="Ex.: Monitor multiparamétrico" required autocomplete="off"></label>
         <label>Técnico<select id="technician" required><option value="">Selecione</option><option>Diego Gama</option><option>Paulo Roberto</option></select></label>
         <label>Resultado<select id="status"><option value="indisponivel">Sem equipamento disponível</option><option value="liberado">Equipamento liberado para manutenção</option></select></label>
+        <label id="quantityField" hidden>Quantidade disponibilizada<input id="quantity" type="number" min="1" max="999" step="1" value="1" inputmode="numeric" disabled></label>
         <label>Nome de quem respondeu<input id="personName" placeholder="Nome completo" required autocomplete="name"></label>
         <label>Função de quem respondeu<input id="personRole" placeholder="Ex.: Enfermeira, técnico de enfermagem" required></label>
         <label>Justificativa / texto do termo<textarea id="justification" rows="5" required></textarea></label>
