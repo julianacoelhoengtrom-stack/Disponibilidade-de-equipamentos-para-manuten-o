@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Caricatura de técnico de engenharia clínica">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#dff2e9"/><stop offset="1" stop-color="#b9ddcd"/></linearGradient>
+    <linearGradient id="shirt" x2="0" y2="1"><stop stop-color="#187354"/><stop offset="1" stop-color="#0d503a"/></linearGradient>
+    <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#223c40"/><stop offset="1" stop-color="#102b30"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="247" cy="208" r="177" fill="#ffffff" opacity=".26"/>
+  <path d="M334 247h127q18 0 18 18v147q0 19-18 19H315q-18 0-18-19V269q0-22 20-22h17z" fill="#f8fbf8" stroke="#486d61" stroke-width="8"/>
+  <rect x="324" y="265" width="128" height="104" rx="12" fill="url(#screen)"/>
+  <path d="M337 309h17l11-20 14 39 16-29 11 17h47" fill="none" stroke="#7be0a7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M340 342q13-16 26 0t26 0t26 0t26 0" fill="none" stroke="#58c9dc" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="430" cy="393" r="12" fill="#d1ded7" stroke="#71877d" stroke-width="5"/>
+  <path d="M115 505q5-116 58-158 29-23 67-25h61q38 3 66 26 25 20 37 70l6 87H115z" fill="url(#shirt)" stroke="#173c30" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M207 316l33 38 33-38 25 14-22 55h-74l-22-55z" fill="#f4f7f3" stroke="#173c30" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M227 351l13 16 13-16-8 47h-10z" fill="#63a78a"/>
+  <path d="M180 184q-16-6-17 17 0 25 24 29m143-46q17-5 18 17 1 24-23 29" fill="#eaa67c" stroke="#633f36" stroke-width="7"/>
+  <path d="M190 132q6-67 67-72 62-4 81 53 8 21 3 63l-9 65q-8 50-57 64-15 5-31 0-50-15-58-65l-8-65q-3-25 12-43z" fill="#f1b38a" stroke="#633f36" stroke-width="8"/>
+  <path d="M180 156q-9-56 24-88 24-24 66-20 51 3 70 43 12 24 4 67-9-21-22-32-24 1-43-17-22 24-71 22-11 8-20 25z" fill="#352721" stroke="#352721" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M187 120q-5-33 25-55m18-15q36-20 72-4m13 8q22 15 27 39" fill="none" stroke="#5b4034" stroke-width="10" stroke-linecap="round"/>
+  <path d="M203 174q16-12 33-2m39 0q17-10 33 2" fill="none" stroke="#442e28" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="222" cy="193" rx="7" ry="10" fill="#252321"/><ellipse cx="292" cy="193" rx="7" ry="10" fill="#252321"/>
+  <circle cx="224" cy="190" r="2.5" fill="#fff"/><circle cx="294" cy="190" r="2.5" fill="#fff"/>
+  <path d="M255 195q-6 25 3 29" fill="none" stroke="#c27d60" stroke-width="6" stroke-linecap="round"/>
+  <path d="M224 244q31 26 64-1" fill="none" stroke="#8c3f3b" stroke-width="8" stroke-linecap="round"/>
+  <path d="M232 247q24 13 47 0" fill="none" stroke="#fff6ee" stroke-width="5" stroke-linecap="round"/>
+  <path d="M159 388q-33 14-45 45l-13 45q-4 17 13 21 13 3 20-11l20-37 36 29 14-19-27-51q-8-16-18-22z" fill="#f1b38a" stroke="#633f36" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M369 365q30 3 41 28l13 25-25 17-37-31z" fill="#f1b38a" stroke="#633f36" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M116 478l19 10-20 20-16-8z" fill="#f6c341" stroke="#4d5044" stroke-width="6"/>
+  <path d="M123 495l18-14" stroke="#474d48" stroke-width="8" stroke-linecap="round"/>
+  <rect x="90" y="470" width="36" height="13" rx="6" fill="#f6c341" stroke="#4d5044" stroke-width="5" transform="rotate(-38 90 470)"/>
+  <path d="M298 336h31" stroke="#c5ddce" stroke-width="8" stroke-linecap="round"/>
+  <path d="M236 403h36" stroke="#b9d7c8" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+</svg>
