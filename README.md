@@ -11,7 +11,9 @@ Este pacote contém somente a aplicação Android móvel. Os registros e assinat
 - Registra nome e função de quem respondeu no setor.
 - Mostra as áreas de assinatura em tela inteira.
 - Salva a visita e o PDF no aparelho.
-- Permite compartilhar o PDF ou o pacote JSON com os dados e PDFs para importar na aplicação web.
+- Sincroniza automaticamente, quando há internet, os registros pendentes com a aplicação web.
+- Envia os PDFs assinados para a pasta do Drive configurada e os dados para a planilha vinculada ao Apps Script.
+- Mantém a exportação manual de pacote JSON como alternativa de contingência.
 
 ## Como colocar no GitHub
 
@@ -24,6 +26,12 @@ Este pacote contém somente a aplicação Android móvel. Os registros e assinat
 
 O APK gerado é de depuração e pode ser instalado diretamente em aparelhos Android. Quando você trocar somente o HTML, não precisa alterar o workflow.
 
+## Integração com a aplicação web
+
+O APK já aponta para a implantação informada pela Engenharia Clínica. Para a sincronização funcionar, atualize o arquivo `Code.gs` deste pacote no projeto Apps Script vinculado à planilha e publique uma nova versão da implantação Web App. O `doPost` recebe os registros, grava na planilha vinculada e salva os PDFs na pasta configurada pelo ID informado.
+
+O app tenta sincronizar ao abrir, ao voltar para o primeiro plano e quando a conexão retorna. Também é possível tocar em **Sincronizar agora**. Registros só são marcados como enviados depois da confirmação do servidor.
+
 ## Teste no computador
 
 Abra `www/index.html` em um navegador moderno. A gravação offline, as visitas e a assinatura funcionam sem servidor. No navegador, os botões de arquivo baixam os arquivos; dentro do APK, eles abrem o menu nativo para compartilhar ou salvar.
@@ -32,6 +40,7 @@ Abra `www/index.html` em um navegador moderno. A gravação offline, as visitas 
 
 - `www/index.html`, `www/styles.css`, `www/app.js`: telas e comportamento do app.
 - `www/assets/tecnico-abertura.png`: imagem de abertura.
+- `www/assets/logo-hnl.jpg`: logo institucional usada nos PDFs.
 - `res/icon.png` e `res/icon/android/`: ícone do aplicativo.
 - `config.xml`: configuração Android/Cordova.
 - `.github/workflows/build-apk.yml`: geração automática do APK.
