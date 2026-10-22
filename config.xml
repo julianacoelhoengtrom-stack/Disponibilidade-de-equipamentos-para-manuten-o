@@ -2,7 +2,7 @@
 <widget id="br.org.hnl.engenhariaclinica.visitas" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Visita Técnica EC</name>
   <description>Registro offline de visitas de manutenção da Engenharia Clínica.</description>
-  <content src="www/index.html" />
+  <content src="index.html" />
   <access origin="https://script.google.com" />
   <access origin="https://script.googleusercontent.com" />
   <author email="engenharia.clinica@hnl.org.br" href="https://cordova.apache.org">Engenharia Clínica</author>
