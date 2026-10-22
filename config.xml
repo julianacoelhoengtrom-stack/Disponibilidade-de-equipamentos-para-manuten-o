@@ -3,6 +3,8 @@
   <name>Visita Técnica EC</name>
   <description>Registro offline de visitas de manutenção da Engenharia Clínica.</description>
   <content src="www/index.html" />
+  <access origin="https://script.google.com" />
+  <access origin="https://script.googleusercontent.com" />
   <author email="engenharia.clinica@hnl.org.br" href="https://cordova.apache.org">Engenharia Clínica</author>
   <preference name="AndroidMinSdkVersion" value="24" />
   <preference name="AndroidTargetSdkVersion" value="36" />
